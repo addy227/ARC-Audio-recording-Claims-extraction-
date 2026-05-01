@@ -1,0 +1,13 @@
+logging:
+  retention_days: 7
+  max_log_size_mb: 5
+  backup_count: 3
+  email_alerts: false
+  alert_email_level: "ERROR"   # ERROR or CRITICAL
+  smtp:
+    sender: "alerts@voiclaim.com"
+    receiver: "you@example.com"
+    server: "smtp.example.com"
+    port: 587
+    username: "alerts@voiclaim.com"
+    password: "your_app_password"

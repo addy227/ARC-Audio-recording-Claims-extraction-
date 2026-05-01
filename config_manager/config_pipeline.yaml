@@ -1,0 +1,50 @@
+# === PATHS ===
+# All paths below are relative to the project root (do not use leading slashes)
+paths:
+  raw_audio_dir:
+  cleaned_audio_dir: 
+  transcripts_dir: 
+  extracted_claims_dir:
+  processed_dir:
+  success_dir:
+  failed_dir:
+  model_dir:
+  log_dir: 
+  metrics_dir: 
+  archive_dir:
+# === STT CONFIG ===
+stt:
+  model_name: 
+  model_size: "medium"
+  supported_formats: [".wav", ".mp3", ".m4a", ".aac", ".flac", "ogg"]
+  supported_format_stt: [".wav"]
+
+# === CLAIM EXTRACTION CONFIG ===
+llm:
+  model_name: "llama3.2"
+  prompt_template_file: "prompt.txt"
+  use_ollama: true
+
+# === REPORT CONFIG ===
+report:
+  summary_report_filename: "summary_report.json"
+  clean_text: true
+
+# === Pipeline ===
+day_offset: 1
+cleanup_days: 20  
+
+# === RETENTION & CLEANUP ===
+retention:
+  log_days: 7
+  output_days: 15   # optional: for rotating processed/stale data
+
+
+# === FILE FILTERING CONFIG ===
+file_filtering:
+  # Exclude files where the second part (after first underscore) starts with this prefix
+  exclude_prefix: ""
+  # Allowed file extensions - only process files with these extensions (e.g., .wav, .mp3, .flac, .m4a, .gsm)
+  allowed_extensions: [".wav", ".mp3", ".flac", ".m4a", ".gsm"]
+  # Allowed codes - only process files where parts[1] (after first underscore) exactly matches these values
+  allowed_codes: 

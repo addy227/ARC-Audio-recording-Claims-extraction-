@@ -1,0 +1,14 @@
+[Unit]
+Description=Voiclaim Daily Pipeline Scheduler Timer
+Requires=voiclaim-scheduler.service
+
+[Timer]
+# Run daily at 10:00 AM
+OnCalendar=*-*-* 10:00:00
+# If the system was off during scheduled time, run immediately after boot
+Persistent=true
+# Add some randomization to avoid system load spikes (0-300 seconds)
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

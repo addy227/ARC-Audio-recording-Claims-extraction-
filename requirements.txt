@@ -1,0 +1,199 @@
+# ============================================================================
+# ARCall Entity Extractor - Requirements
+# Generated from venv: /home/nalabotalaadvait/Documents/Dev1/ARCall-Entity-Extractor/.venv
+# ============================================================================
+
+# ============================================================================
+# Core ML and Deep Learning
+# ============================================================================
+torch==2.9.1
+torchaudio==2.9.1
+transformers==4.57.3
+tokenizers==0.22.1
+sentencepiece==0.2.1
+safetensors==0.7.0
+accelerate==1.12.0
+bitsandbytes==0.49.1
+huggingface-hub==0.36.0
+
+# ============================================================================
+# Audio Processing
+# ============================================================================
+openai-whisper==20250625
+librosa==0.10.0.post2
+noisereduce==3.0.3
+pydub==0.25.1
+soundfile==0.13.1
+audioread==3.1.0
+soxr==1.0.0
+ctranslate2==4.4.0
+
+# ============================================================================
+# Data Processing and Analysis
+# ============================================================================
+numpy==2.2.6
+pandas==2.3.1
+scipy==1.15.3
+numba==0.61.2
+matplotlib==3.10.3
+scikit-learn==1.7.2
+joblib==1.5.3
+
+# ============================================================================
+# LLM Integration and AI APIs
+# ============================================================================
+ollama==0.5.1
+openai>=1.0.0  # Required for GPTo4_STT.py (OpenAI Audio API)
+tiktoken==0.12.0
+
+# ============================================================================
+# Web Framework and APIs
+# ============================================================================
+fastapi==0.101.0
+uvicorn==0.22.0
+starlette==0.27.0
+streamlit==1.48.0
+pydantic==2.11.7
+pydantic_core==2.33.2
+httpx==0.28.1
+httpcore==1.0.9
+requests==2.32.3
+
+# ============================================================================
+# Database Connectivity
+# ============================================================================
+psycopg2-binary>=2.9.10  # PostgreSQL adapter (binary version for easier installation)
+pyodbc==5.3.0  # SQL Server connectivity
+
+# ============================================================================
+# Configuration and Environment
+# ============================================================================
+python-dotenv==1.0.1
+PyYAML==6.0.3
+ruamel.yaml==0.18.17
+ruamel.yaml.clib==0.2.15
+protobuf==3.20.3
+
+# ============================================================================
+# Logging and Monitoring
+# ============================================================================
+structlog==25.5.0
+python-json-logger==4.0.0
+
+# ============================================================================
+# Utilities and Progress Tracking
+# ============================================================================
+tqdm==4.67.1
+psutil==7.2.0
+filelock==3.20.1
+packaging==25.0
+
+# ============================================================================
+# Text Processing and NLP
+# ============================================================================
+nltk==3.9.2
+regex==2025.11.3
+
+# ============================================================================
+# System and OS Utilities
+# ============================================================================
+certifi==2025.11.12
+charset-normalizer==3.4.4
+idna==3.11
+urllib3==2.6.2
+cryptography==46.0.3
+
+# ============================================================================
+# Development and Testing Dependencies
+# ============================================================================
+# Testing Framework
+pytest==8.4.1
+pytest-cov==7.0.0
+pytest-mock==3.15.1
+coverage==7.13.1
+
+# Code Quality and Formatting
+black==25.12.0
+flake8==7.3.0
+mypy==1.19.1
+mypy_extensions==1.1.0
+pycodestyle==2.14.0
+pyflakes==3.4.0
+mccabe==0.7.0
+
+# Security Scanning
+bandit==1.9.2
+safety==3.7.0
+safety-schemas==0.0.16
+
+# ============================================================================
+# Additional Core Dependencies
+# ============================================================================
+attrs==25.4.0
+click==8.3.1
+typing_extensions==4.15.0
+exceptiongroup==1.3.1
+
+# JSON and Schema
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+jsonpointer==3.0.0
+fastjsonschema==2.21.2
+
+# Async support
+anyio==4.12.0
+nest-asyncio==1.6.0
+
+# Date and Time
+python-dateutil==2.9.0.post0
+pytz==2025.2
+tzdata==2025.3
+arrow==1.4.0
+
+# Network and HTTP utilities
+h11==0.16.0
+websocket-client==1.9.0
+
+# File and path utilities
+pathspec==0.12.1
+platformdirs==4.5.1
+appdirs==1.4.4
+
+# Git support
+GitPython==3.1.45
+gitdb==4.0.12
+smmap==5.0.2
+
+# Markdown and text processing
+markdown-it-py==4.0.0
+mdurl==0.1.2
+mistune==3.2.0
+Pygments==2.19.2
+rich==14.2.0
+
+# Additional utilities
+cachetools==6.2.4
+decorator==5.2.1
+more-itertools==10.8.0
+six==1.17.0
+tenacity==9.1.2
+
+# ============================================================================
+# Notes
+# ============================================================================
+# 1. For GPU support, ensure CUDA-compatible PyTorch is installed
+#    Visit: https://pytorch.org/get-started/locally/
+#
+# 2. Some packages may require system dependencies:
+#    - ffmpeg (for audio processing)
+#    - libsndfile (for soundfile)
+#    - ODBC drivers (for pyodbc)
+#
+# 3. If you encounter issues with psycopg2, use psycopg2-binary instead
+#
+# 4. For Azure Blob Storage, you may need: azure-storage-blob
+#    Install separately if needed: pip install azure-storage-blob
+#
+# 5. For LangSmith tracing (optional), install: pip install langsmith
+#
+# 6. For Flask (local_server_example.py), install: pip install flask flask-cors

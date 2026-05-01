@@ -1,0 +1,17 @@
+[Unit]
+Description=Voiclaim Daily Pipeline Scheduler
+After=network.target
+
+[Service]
+Type=oneshot
+User=%i
+WorkingDirectory=/home/nalabotalaadvait/Documents/Dev1/Merge/ARCall-Entity-Extractor-1
+ExecStart=/usr/bin/python3 /home/nalabotalaadvait/Documents/Dev1/Merge/ARCall-Entity-Extractor-1/scheduler.py
+StandardOutput=journal
+StandardError=journal
+Environment="PATH=/usr/bin:/usr/local/bin"
+# Add your environment variables here if needed
+# Environment="POST_PROCESS_URL=your_api_url_here"
+
+[Install]
+WantedBy=multi-user.target
