@@ -8,9 +8,6 @@ This script orchestrates the Voiclaim audio-to-claim pipeline, including:
     4. API integration
 
 Stages are modular, robust, and support retries. File movement is tracked for each stage.
-
-Author: Akash GR
-Created On: 2025-06-23
 """
 
 import csv
