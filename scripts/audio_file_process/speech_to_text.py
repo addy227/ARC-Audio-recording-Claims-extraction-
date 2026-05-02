@@ -6,10 +6,6 @@ Description:
 
 Pipeline Stage:
     Stage 2 - Speech-to-Text (STT)
-
-Author: Akash GR
-Created On: 2025-06-23
-
 Usage:
     Run standalone:
         python speech_to_text.py
